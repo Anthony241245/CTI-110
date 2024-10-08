@@ -19,11 +19,12 @@ print(f"The dimaeter of the circle is {diameter:.1f}\n")
 print()
 #Get the cirumference
 cirumfrenece = 2 * math.pi * radius
+#Display the cirumference
 print(f"The cirumference of the circle is {cirumfrenece:.2f}\n")
 print()
 #Get area of the circle
 area = math.pi * radius**2
-#Display changes
+#Display the area
 print(f"The area of the circle is {area:.3f}\n")
 
 
