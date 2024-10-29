@@ -1,5 +1,5 @@
 #Get value from user 
-change = float(input("Enter an amount of money: $"))
+change = float(input("Enter an amount of money as a float: $"))
 
 print(f"Change Amount: {change}")
 
@@ -7,6 +7,10 @@ print(f"Change Amount: {change}")
 change = round(change * 100)
 
 print(f"Change Amount: {change}")
+
+if change == 0:
+    print("No Change Due")
+
 
 #Determine how many coins are needed
 num_dollars = change // 100
@@ -49,9 +53,9 @@ if num_nickels > 0:
 
 if num_pennies > 0:
     if num_pennies == 1:
-        print(f"{num_pennies} Nickel")
+        print(f"{num_pennies} penny")
     else:
-        print(f"{num_pennies} Nickels")
+        print(f"{num_pennies} pennies")
 
 
 
