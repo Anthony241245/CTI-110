@@ -37,8 +37,8 @@ def getHabitat(animal):
 
 
 def getFriends(habitat, numFriends):
-      friends = []
-      if habitat == "ocean":     
+    friends = []
+    if habitat == "ocean":     
         oceanList = ["turtle", "fish", "anemone", "urchin" "jellyfish", "shark"]
         # Loop run numFriends times
         for i in range(numFriends):
@@ -46,20 +46,20 @@ def getFriends(habitat, numFriends):
              friends.append(random.choice(oceanList))
         return friends
 
-        if habitat == "desert":     
-            desertList = ["iguana", "spider", "camel", "fox",  "snake"]
-        # Loop run numFriends times
+    if habitat == "desert":     
+        desertList = ["iguana", "spider", "camel", "fox",  "snake"]
+            # Loop run numFriends times
         for i in range(numFriends):
-             # Adding a random oceanList item to the friends list
-             friends.append(random.choice(oceanList))
+                 # Adding a random oceanList item to the friends list
+            friends.append(random.choice(desertList))
         return friends
 
-        if habitat == "jungle":     
-            jungleList = ["lemur", "monkey", "tiger", "parrot" "panda", "panther", "lion"]
+    if habitat == "jungle":     
+        jungleList = ["lemur", "monkey", "tiger", "parrot" "panda", "panther", "lion"]
         # Loop run numFriends times
         for i in range(numFriends):
              # Adding a random oceanList item to the friends list
-             friends.append(random.choice(oceanList))
+            friends.append(random.choice(jungleList))
         return friends
            
       
