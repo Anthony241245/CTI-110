@@ -4,7 +4,7 @@ import random
 def disperse_change(change):
 
     #Converting the value to an interger
-    change = round(change * 100)
+    change = round(int(change * 100), 2)
 
     
 
@@ -65,7 +65,10 @@ def main ():
     print(f"You owe ${money_owed:.2f}")
     cashPaid = float(input("How much cash will you put in the self-checkout? "))
     change = cashPaid - money_owed
-    print(f"Change is: {change:.2f}")
+    print(f"Change is: ${change:.2f}")
+    print(f"Change without formatting is: ${change}")
+    change = round(change, 2)
+    print(f"The change is ${change}")
     disperse_change(change)
 
 
