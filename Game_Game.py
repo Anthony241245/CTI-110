@@ -140,8 +140,8 @@ def battle(char1, char2):
         opponent = char2 if turn % 2 == 0 else char1
         random.shuffle(character)
         print(f"{current_player['Name']}'s turn!")
-        print(f"1. Attack\n2. Defend\n3. Special Move")
-        choice = input("Choose your action (1/2/3): ")
+        print(f"1. Attack\n2. Defend\n3. Special Move\n4. Special_nen_damage\n5. dodge")
+        choice = input("Choose your action (1/2/3/4/5): ")
 
         if choice == "1":
             damage = random.randint(50, current_player['Strength'])
