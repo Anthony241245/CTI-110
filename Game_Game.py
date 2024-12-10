@@ -149,19 +149,33 @@ def battle(char1, char2):
             print(f"{current_player['Name']} attacked with {current_player['Weapons']}! {opponent['Name']} took {damage} damage.") 
             # Rework Healing
         elif choice == "2":
-            heal = random.randint(1, 25)
-            current_player["Health"] += heal
-            print(f"{current_player['Name']} has healed {heal} hp")
+            chance = random.randint(1, 100)  
+            if chance <= 20:
+                heal = random.randint(1, 25) 
+                current_player["Health"] += heal
+                print(f"{current_player['Name']} has healed {heal} hp")
+            else:
+                print(f"{current_player['Name']} tried to heal but failed")
+
 
         elif choice == "3":
-            Special_weapon_damage = random.randint(80, 200)
-            opponent["Health"] -= Special_weapon_damage
-            print(f"{current_player['Name']} used {current_player['Weapons']} {opponent['Name']} took {Special_weapon_damage} damage.")
+            chance = random.randint(1,100)
+            if chance <= 40:
+                    Special_weapon_damage = random.randint(80, 200)
+                    opponent["Health"] -= Special_weapon_damage
+                    print(f"{current_player['Name']} used {current_player['Weapons']} {opponent['Name']} took {Special_weapon_damage} damage.")
+            else:
+                    print(f"{current_player['Name']} tried to use a Special but failed")
 
         elif choice =="4":
-            Special_nen_damage = random.randint(100,250)
-            opponent["Health"] -= Special_nen_damage
-            print(f"{current_player['Name']} used {current_player['Nen_type']} ability {opponent['Name']} took {Special_nen_damage} damage.")
+            chance = random.randint(1,100)
+            if chance <= 30:
+                Special_nen_damage = random.randint(100,250)
+                opponent["Health"] -= Special_nen_damage
+                print(f"{current_player['Name']} used {current_player['Nen_type']} ability {opponent['Name']} took {Special_nen_damage} damage.")
+            else:
+                    print(f"{current_player['Name']} tried to use a Special but failed")
+            
             # Rework dodged attacked
         elif choice =="5":
                 if random.randint(1, 115) <= 20:
